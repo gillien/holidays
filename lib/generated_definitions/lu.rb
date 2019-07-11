@@ -12,14 +12,17 @@ module Holidays
 
     def self.holidays_by_month
       {
-                0 => [{:function => "easter(year)", :function_arguments => [:year], :function_modifier => 1, :name => "Ouschterméindeg", :regions => [:lu]},
-            {:function => "easter(year)", :function_arguments => [:year], :function_modifier => 39, :name => "Christi Himmelfaart", :regions => [:lu]},
-            {:function => "easter(year)", :function_arguments => [:year], :function_modifier => 49, :name => "Péngschtméindeg", :regions => [:lu]}],
+                0 => [{:function => "easter(year)", :function_arguments => [:year], :function_modifier => -2, :name => "Good Friday", :regions => [:lu]},
+            {:function => "easter(year)", :function_arguments => [:year], :function_modifier => -1, :name => "The day following Good Friday", :regions => [:lu]},
+            {:function => "easter(year)", :function_arguments => [:year], :function_modifier => 1, :name => "Easter Monday", :regions => [:lu]}],
       1 => [{:mday => 1, :name => "Neijoerschdag", :regions => [:lu]}],
+      5 => [{:mday => 1, :name => "Fête du travail", :regions => [:lu]},
+            {:mday => 9, :year_ranges => { :from => 2019 },:name => "Europadag", :regions => [:lu]}],
       6 => [{:mday => 23, :name => "Nationalfeierdag", :regions => [:lu]}],
       8 => [{:mday => 15, :name => "Léiffrawëschdag", :regions => [:lu]}],
       11 => [{:mday => 1, :name => "Allerhellgen", :regions => [:lu]}],
-      12 => [{:mday => 25, :name => "Chrëschtdag", :regions => [:lu]},
+      12 => [{:mday => 24, :name => "Christmas Eve (afternoon)", :regions => [:lu]},
+            {:mday => 25, :name => "Chrëschtdag", :regions => [:lu]},
             {:mday => 26, :name => "Stiefesdag", :regions => [:lu]}]
       }
     end
