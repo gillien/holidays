@@ -11,7 +11,7 @@ class LuDefinitionTests < Test::Unit::TestCase  # :nodoc:
 
     assert_equal "Ouschterméindeg", (Holidays.on(Date.civil(2008, 3, 24), [:lu], [:informal])[0] || {})[:name]
 
-    assert_equal "Christi Himmelfaart", (Holidays.on(Date.civil(2008, 5, 1), [:lu], [:informal])[0] || {})[:name]
+    assert_equal "Dag vun der Aarbecht", (Holidays.on(Date.civil(2008, 5, 1), [:lu], [:informal])[0] || {})[:name]
 
     assert_equal "Nationalfeierdag", (Holidays.on(Date.civil(2008, 6, 23), [:lu], [:informal])[0] || {})[:name]
 
@@ -24,6 +24,8 @@ class LuDefinitionTests < Test::Unit::TestCase  # :nodoc:
     assert_equal "Stiefesdag", (Holidays.on(Date.civil(2008, 12, 26), [:lu], [:informal])[0] || {})[:name]
 
     assert_equal "Péngschtméindeg", (Holidays.on(Date.civil(2008, 5, 11), [:lu], [:informal])[0] || {})[:name]
+
+    assert_equal "Christi Himmelfaart", (Holidays.on(Date.civil(2019, 6, 10), [:lu], [:informal])[0] || {})[:name]
 
   end
 end
